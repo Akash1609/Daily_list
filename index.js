@@ -15,7 +15,7 @@ const List = mongoose.model("List", listschema);
 
 const list1 = new List({name:"wake-up early"});
 const list2 = new List({name:"do yoga"});
-const list3 = new List({name:"get bath"});
+const list3 = new List({name:"get bath and ready"});
 
 const newTasks= [list1,list2,list3];
 
