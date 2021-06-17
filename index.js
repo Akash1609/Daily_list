@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const day = require(__dirname+"/date.js");
@@ -5,7 +6,7 @@ const mongoose = require("mongoose");
 const lodash = require("lodash");
 const app = express();
 
-mongoose.connect("mongodb+srv://admin-akash:Ak@sh1998@cluster0.6k7so.mongodb.net/listDB",{useNewUrlParser:true , useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://admin-"+process.env.ADMIN+"@cluster0.6k7so.mongodb.net/listDB",{useNewUrlParser:true , useUnifiedTopology:true});
 
 const listschema = new mongoose.Schema({
     name:String
